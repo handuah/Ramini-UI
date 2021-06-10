@@ -108,7 +108,7 @@ class _OTPPageState extends State<OTPPage> {
                           style: GoogleFonts.alata(
                             textStyle: TextStyle(
                               letterSpacing: 2,
-                              fontSize: 20.0,
+                              fontSize: 18.0,
                               fontWeight: FontWeight.bold,
                               color: HexColor("#FA3F5C"),
                             ),
@@ -130,7 +130,7 @@ class _OTPPageState extends State<OTPPage> {
                       style: GoogleFonts.alata(
                         textStyle: TextStyle(
                           // letterSpacing: 2,
-                          fontSize: 16.0,
+                          fontSize: 14.0,
                           fontWeight: FontWeight.w600,
                           color: Colors.grey.shade700,
                         ),

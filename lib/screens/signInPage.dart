@@ -186,7 +186,7 @@ class _SignInPageState extends State<SignInPage> {
                         style: GoogleFonts.alata(
                           textStyle: TextStyle(
                             // letterSpacing: 2,
-                            fontSize: 16.0,
+                            fontSize: 14.0,
                             fontWeight: FontWeight.w600,
                             color: Colors.grey.shade700,
                           ),

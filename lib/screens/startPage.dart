@@ -38,6 +38,9 @@ class _StartPageState extends State<StartPage> {
               ),
             ),
           ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
           Text(
             'RAMINI',
             style: GoogleFonts.poppins(
