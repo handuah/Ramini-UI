@@ -122,7 +122,7 @@ class _WelcomePageState extends State<WelcomePage> {
           ),
           TextButton(
             onPressed: () {
-              // Navigator.pushNamed(context, '/signinScreen');
+              Navigator.pushNamed(context, '/homeScreen');
             },
             child: Text(
               'Skip',
