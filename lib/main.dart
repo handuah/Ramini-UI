@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ramini_app/screens/homeScreen.dart';
 import 'package:ramini_app/screens/otpPage.dart';
 import 'package:ramini_app/screens/signInPage.dart';
 import 'package:ramini_app/screens/startPage.dart';
@@ -25,6 +26,7 @@ class RaminiApp extends StatelessWidget {
           '/signinScreen': (context) => SignInPage(),
           '/otpScreen': (context) => OTPPage(),
           '/welcomeScreen': (context) => WelcomePage(),
+          '/homeScreen': (context) => HomeScreen(),
         });
   }
 }
