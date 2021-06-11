@@ -71,7 +71,7 @@ class _OTPPageState extends State<OTPPage> {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.1,
+            height: MediaQuery.of(context).size.height * 0.16,
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.6,
@@ -232,7 +232,9 @@ class _OTPPageState extends State<OTPPage> {
                       height: MediaQuery.of(context).size.height * 0.01,
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/welcomeScreen');
+                      },
                       child: Text(
                         'VERIFY OTP',
                         style: GoogleFonts.alata(
