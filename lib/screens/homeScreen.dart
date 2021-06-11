@@ -128,13 +128,164 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   style: TextButton.styleFrom(
                     backgroundColor: HexColor("#FFFFFF"),
-                    // padding: EdgeInsets.symmetric(
-                    //   horizontal: MediaQuery.of(context).size.width * 0.24,
-                    //   vertical: MediaQuery.of(context).size.height * 0.016,
-                    // ),
-                    // shape: RoundedRectangleBorder(
-                    //   borderRadius: BorderRadius.circular(20.0),
-                    // ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Material(
+                  elevation: 4.0,
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.32,
+                    width: MediaQuery.of(context).size.width / 2.1,
+                    decoration: BoxDecoration(
+                      // color: Colors.red,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: MediaQuery.of(context).size.height * 0.01,
+                        horizontal: MediaQuery.of(context).size.width * 0.007,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.2,
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            child: Image(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width,
+                              image: AssetImage('assets/avatar.jpg'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Text(
+                            'Three Chairs',
+                            style: GoogleFonts.alata(
+                              textStyle: TextStyle(
+                                // letterSpacing: 2,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w300,
+                                color: HexColor("#000000"),
+                              ),
+                            ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            // crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                'GHC 1000',
+                                style: GoogleFonts.alata(
+                                  textStyle: TextStyle(
+                                    // letterSpacing: 2,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                              Material(
+                                elevation: 2.0,
+                                borderRadius: BorderRadius.circular(100.0),
+                                color: HexColor("#F74463"),
+                                // shape: RoundedRectangleBorder(),
+                                child: IconButton(
+                                  icon: Icon(Icons.shopping_cart_outlined),
+                                  color: HexColor("#FFFFFF"),
+                                  iconSize: 20.0,
+                                  splashColor: Colors.grey,
+                                  splashRadius: 25.0,
+                                  onPressed: () {},
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Material(
+                  elevation: 4.0,
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.32,
+                    width: MediaQuery.of(context).size.width / 2.1,
+                    decoration: BoxDecoration(
+                      // color: Colors.red,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: MediaQuery.of(context).size.height * 0.01,
+                        horizontal: MediaQuery.of(context).size.width * 0.007,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.2,
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            child: Image(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width,
+                              image: AssetImage('assets/avatar.jpg'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Text(
+                            'Three Chairs',
+                            style: GoogleFonts.alata(
+                              textStyle: TextStyle(
+                                // letterSpacing: 2,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w300,
+                                color: HexColor("#000000"),
+                              ),
+                            ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            // crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                'GHC 1000',
+                                style: GoogleFonts.alata(
+                                  textStyle: TextStyle(
+                                    // letterSpacing: 2,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                              Material(
+                                elevation: 2.0,
+                                borderRadius: BorderRadius.circular(100.0),
+                                color: HexColor("#F74463"),
+                                // shape: RoundedRectangleBorder(),
+                                child: IconButton(
+                                  icon: Icon(Icons.shopping_cart_outlined),
+                                  color: HexColor("#FFFFFF"),
+                                  iconSize: 20.0,
+                                  splashColor: Colors.grey,
+                                  splashRadius: 25.0,
+                                  onPressed: () {},
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ],
