@@ -40,11 +40,11 @@ class _UBLSpeakersState extends State<UBLSpeakers> {
                 ),
                 IconButton(
                   icon: isPressed
-                      ? Icon(Icons.favorite_outline)
-                      : Icon(
+                      ? Icon(
                           Icons.favorite,
                           color: Colors.red,
-                        ),
+                        )
+                      : Icon(Icons.favorite_outline),
                   onPressed: () {
                     setState(() {
                       isPressed = !isPressed;
@@ -94,11 +94,11 @@ class _UBLSpeakersState extends State<UBLSpeakers> {
                     IconButton(
                       icon: isStarPressed
                           ? Icon(
-                              Icons.star_outline,
+                              Icons.star,
                               color: HexColor("#F74463"),
                             )
                           : Icon(
-                              Icons.star,
+                              Icons.star_outline,
                               color: HexColor("#F74463"),
                             ),
                       onPressed: () {
