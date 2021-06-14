@@ -11,6 +11,9 @@ class UBLSpeakers extends StatefulWidget {
 }
 
 class _UBLSpeakersState extends State<UBLSpeakers> {
+  bool isPressed = false;
+  bool isStarPressed = false;
+  bool isAdded2Cart = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,8 +39,17 @@ class _UBLSpeakersState extends State<UBLSpeakers> {
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.favorite_outline),
-                  onPressed: () {},
+                  icon: isPressed
+                      ? Icon(Icons.favorite_outline)
+                      : Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                        ),
+                  onPressed: () {
+                    setState(() {
+                      isPressed = !isPressed;
+                    });
+                  },
                 ),
               ],
             ),
@@ -80,11 +92,20 @@ class _UBLSpeakersState extends State<UBLSpeakers> {
                       ),
                     ),
                     IconButton(
-                      icon: Icon(
-                        Icons.star_outline,
-                        color: HexColor("#F74463"),
-                      ),
-                      onPressed: () {},
+                      icon: isStarPressed
+                          ? Icon(
+                              Icons.star_outline,
+                              color: HexColor("#F74463"),
+                            )
+                          : Icon(
+                              Icons.star,
+                              color: HexColor("#F74463"),
+                            ),
+                      onPressed: () {
+                        setState(() {
+                          isStarPressed = !isStarPressed;
+                        });
+                      },
                     ),
                     Text(
                       '4.5',
@@ -305,16 +326,20 @@ class _UBLSpeakersState extends State<UBLSpeakers> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      isAdded2Cart = !isAdded2Cart;
+                    });
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Add to Cart',
+                        isAdded2Cart ? 'Added to Cart' : 'Add to Cart',
                         style: GoogleFonts.alata(
                           textStyle: TextStyle(
                             // letterSpacing: 2,
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w300,
                             color: HexColor("#FFFFFF"),
                           ),
@@ -329,7 +354,8 @@ class _UBLSpeakersState extends State<UBLSpeakers> {
                   ),
                   style: TextButton.styleFrom(
                     elevation: 4.0,
-                    backgroundColor: HexColor("#F74463"),
+                    backgroundColor:
+                        isAdded2Cart ? Colors.grey : HexColor("#F74463"),
                     padding: EdgeInsets.symmetric(
                         vertical: MediaQuery.of(context).size.height * 0.024,
                         horizontal: MediaQuery.of(context).size.width * 0.1),
