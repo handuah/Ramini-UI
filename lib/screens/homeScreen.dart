@@ -223,14 +223,23 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Container(
-                              height: MediaQuery.of(context).size.height * 0.2,
-                              width: MediaQuery.of(context).size.width * 0.7,
-                              child: Image(
-                                height: MediaQuery.of(context).size.height,
-                                width: MediaQuery.of(context).size.width,
-                                image: AssetImage('assets/chair.png'),
-                                fit: BoxFit.fill,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/chairDetails');
+                              },
+                              child: Container(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.2,
+                                width: MediaQuery.of(context).size.width * 0.7,
+                                child: Hero(
+                                  tag: 'chair',
+                                  child: Image(
+                                    height: MediaQuery.of(context).size.height,
+                                    width: MediaQuery.of(context).size.width,
+                                    image: AssetImage('assets/chair.png'),
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
                               ),
                             ),
                             Text(
