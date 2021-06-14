@@ -14,6 +14,69 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody:
+          true, //this removes the white space at the begining of Bottom Navigation Bar after curve
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(
+            40.0,
+          ),
+          topRight: Radius.circular(
+            40.0,
+          ),
+        ),
+        child: BottomNavigationBar(
+          elevation: 4.0,
+          backgroundColor: HexColor("#F74960"),
+          items: [
+            BottomNavigationBarItem(
+              // backgroundColor: Colors.red,
+              icon: Icon(
+                Icons.mail_outlined,
+                color: Colors.white,
+                size: 24.0,
+              ),
+              label: '',
+              // title: Text('Dashboard'),
+              activeIcon: Icon(
+                Icons.mail_outlined,
+                color: Colors.white,
+                size: 24.0,
+              ),
+            ),
+            BottomNavigationBarItem(
+              // backgroundColor: Colors.red,
+              icon: Icon(
+                Icons.home_outlined,
+                color: Colors.white,
+                size: 24.0,
+              ),
+              label: '',
+              // title: Text('Dashboard'),
+              activeIcon: Icon(
+                Icons.home_outlined,
+                color: HexColor("#5B67CA"),
+                size: 24.0,
+              ),
+            ),
+            BottomNavigationBarItem(
+              // backgroundColor: Colors.red,
+              icon: Icon(
+                Icons.verified_user_outlined,
+                color: Colors.white,
+                size: 24.0,
+              ),
+              label: '',
+              // title: Text('Dashboard'),
+              activeIcon: Icon(
+                Icons.mail_outlined,
+                color: HexColor("#5B67CA"),
+                size: 24.0,
+              ),
+            ),
+          ],
+        ),
+      ),
       backgroundColor: HexColor("#FFFFFF"),
       body: Padding(
         padding: EdgeInsets.symmetric(
@@ -50,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.02,
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,16 +229,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Image(
                                 height: MediaQuery.of(context).size.height,
                                 width: MediaQuery.of(context).size.width,
-                                image: AssetImage('assets/avatar.jpg'),
+                                image: AssetImage('assets/chair.png'),
                                 fit: BoxFit.fill,
                               ),
                             ),
                             Text(
-                              'Three Chairs',
+                              'Chairs',
                               style: GoogleFonts.alata(
                                 textStyle: TextStyle(
                                   // letterSpacing: 2,
-                                  fontSize: 18.0,
+                                  fontSize: 16.0,
                                   fontWeight: FontWeight.w300,
                                   color: HexColor("#000000"),
                                 ),
@@ -190,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: GoogleFonts.alata(
                                     textStyle: TextStyle(
                                       // letterSpacing: 2,
-                                      fontSize: 16.0,
+                                      fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
                                       color: Colors.grey,
                                     ),
@@ -204,7 +267,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: IconButton(
                                     icon: Icon(Icons.shopping_cart_outlined),
                                     color: HexColor("#FFFFFF"),
-                                    iconSize: 20.0,
+                                    iconSize: 16.0,
                                     splashColor: Colors.grey,
                                     splashRadius: 25.0,
                                     onPressed: () {},
@@ -245,16 +308,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Image(
                                 height: MediaQuery.of(context).size.height,
                                 width: MediaQuery.of(context).size.width,
-                                image: AssetImage('assets/avatar.jpg'),
-                                fit: BoxFit.fill,
+                                image: AssetImage('assets/jbl.png'),
+                                fit: BoxFit.contain,
                               ),
                             ),
                             Text(
-                              'Three Chairs',
+                              'UBL Speakers',
                               style: GoogleFonts.alata(
                                 textStyle: TextStyle(
                                   // letterSpacing: 2,
-                                  fontSize: 18.0,
+                                  fontSize: 16.0,
                                   fontWeight: FontWeight.w300,
                                   color: HexColor("#000000"),
                                 ),
@@ -265,11 +328,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               // crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  'GHC 1000',
+                                  'GHC 700',
                                   style: GoogleFonts.alata(
                                     textStyle: TextStyle(
                                       // letterSpacing: 2,
-                                      fontSize: 16.0,
+                                      fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
                                       color: Colors.grey,
                                     ),
@@ -283,7 +346,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: IconButton(
                                     icon: Icon(Icons.shopping_cart_outlined),
                                     color: HexColor("#FFFFFF"),
-                                    iconSize: 20.0,
+                                    iconSize: 16.0,
                                     splashColor: Colors.grey,
                                     splashRadius: 25.0,
                                     onPressed: () {},
@@ -324,16 +387,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Image(
                                 height: MediaQuery.of(context).size.height,
                                 width: MediaQuery.of(context).size.width,
-                                image: AssetImage('assets/avatar.jpg'),
-                                fit: BoxFit.fill,
+                                image: AssetImage('assets/ear-buds.png'),
+                                fit: BoxFit.contain,
                               ),
                             ),
                             Text(
-                              'Three Chairs',
+                              'AirPods 2',
                               style: GoogleFonts.alata(
                                 textStyle: TextStyle(
                                   // letterSpacing: 2,
-                                  fontSize: 18.0,
+                                  fontSize: 16.0,
                                   fontWeight: FontWeight.w300,
                                   color: HexColor("#000000"),
                                 ),
@@ -344,11 +407,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               // crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  'GHC 1000',
+                                  'GHC 8000',
                                   style: GoogleFonts.alata(
                                     textStyle: TextStyle(
                                       // letterSpacing: 2,
-                                      fontSize: 16.0,
+                                      fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
                                       color: Colors.grey,
                                     ),
@@ -362,7 +425,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: IconButton(
                                     icon: Icon(Icons.shopping_cart_outlined),
                                     color: HexColor("#FFFFFF"),
-                                    iconSize: 20.0,
+                                    iconSize: 16.0,
                                     splashColor: Colors.grey,
                                     splashRadius: 25.0,
                                     onPressed: () {},
@@ -400,7 +463,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/homeScreen');
+                    // Navigator.pushNamed(context, '/homeScreen');
                   },
                   child: Text(
                     'See All',
@@ -453,16 +516,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Image(
                                 height: MediaQuery.of(context).size.height,
                                 width: MediaQuery.of(context).size.width,
-                                image: AssetImage('assets/avatar.jpg'),
-                                fit: BoxFit.fill,
+                                image: AssetImage('assets/gamepad.png'),
+                                fit: BoxFit.contain,
                               ),
                             ),
                             Text(
-                              'Three Chairs',
+                              'Game Pad',
                               style: GoogleFonts.alata(
                                 textStyle: TextStyle(
                                   // letterSpacing: 2,
-                                  fontSize: 18.0,
+                                  fontSize: 16.0,
                                   fontWeight: FontWeight.w300,
                                   color: HexColor("#000000"),
                                 ),
@@ -473,11 +536,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               // crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  'GHC 1000',
+                                  'GHC 700',
                                   style: GoogleFonts.alata(
                                     textStyle: TextStyle(
                                       // letterSpacing: 2,
-                                      fontSize: 16.0,
+                                      fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
                                       color: Colors.grey,
                                     ),
@@ -491,7 +554,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: IconButton(
                                     icon: Icon(Icons.shopping_cart_outlined),
                                     color: HexColor("#FFFFFF"),
-                                    iconSize: 20.0,
+                                    iconSize: 16.0,
                                     splashColor: Colors.grey,
                                     splashRadius: 25.0,
                                     onPressed: () {},
@@ -532,16 +595,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Image(
                                 height: MediaQuery.of(context).size.height,
                                 width: MediaQuery.of(context).size.width,
-                                image: AssetImage('assets/avatar.jpg'),
-                                fit: BoxFit.fill,
+                                image: AssetImage('assets/table1.png'),
+                                fit: BoxFit.contain,
                               ),
                             ),
                             Text(
-                              'Three Chairs',
+                              'Round Centre Table',
                               style: GoogleFonts.alata(
                                 textStyle: TextStyle(
                                   // letterSpacing: 2,
-                                  fontSize: 18.0,
+                                  fontSize: 16.0,
                                   fontWeight: FontWeight.w300,
                                   color: HexColor("#000000"),
                                 ),
@@ -552,11 +615,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               // crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  'GHC 1000',
+                                  'GHC 500',
                                   style: GoogleFonts.alata(
                                     textStyle: TextStyle(
                                       // letterSpacing: 2,
-                                      fontSize: 16.0,
+                                      fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
                                       color: Colors.grey,
                                     ),
@@ -570,7 +633,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: IconButton(
                                     icon: Icon(Icons.shopping_cart_outlined),
                                     color: HexColor("#FFFFFF"),
-                                    iconSize: 20.0,
+                                    iconSize: 16.0,
                                     splashColor: Colors.grey,
                                     splashRadius: 25.0,
                                     onPressed: () {},
@@ -611,16 +674,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Image(
                                 height: MediaQuery.of(context).size.height,
                                 width: MediaQuery.of(context).size.width,
-                                image: AssetImage('assets/avatar.jpg'),
-                                fit: BoxFit.fill,
+                                image: AssetImage('assets/tcl.png'),
+                                fit: BoxFit.contain,
                               ),
                             ),
                             Text(
-                              'Three Chairs',
+                              'TCL Android TV',
                               style: GoogleFonts.alata(
                                 textStyle: TextStyle(
                                   // letterSpacing: 2,
-                                  fontSize: 18.0,
+                                  fontSize: 16.0,
                                   fontWeight: FontWeight.w300,
                                   color: HexColor("#000000"),
                                 ),
@@ -631,11 +694,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               // crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  'GHC 1000',
+                                  'GHC 5000',
                                   style: GoogleFonts.alata(
                                     textStyle: TextStyle(
                                       // letterSpacing: 2,
-                                      fontSize: 16.0,
+                                      fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
                                       color: Colors.grey,
                                     ),
@@ -649,7 +712,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: IconButton(
                                     icon: Icon(Icons.shopping_cart_outlined),
                                     color: HexColor("#FFFFFF"),
-                                    iconSize: 20.0,
+                                    iconSize: 16.0,
                                     splashColor: Colors.grey,
                                     splashRadius: 25.0,
                                     onPressed: () {},
@@ -664,6 +727,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
           ],
         ),
