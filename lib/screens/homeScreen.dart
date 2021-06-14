@@ -302,14 +302,23 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Container(
-                              height: MediaQuery.of(context).size.height * 0.2,
-                              width: MediaQuery.of(context).size.width * 0.7,
-                              child: Image(
-                                height: MediaQuery.of(context).size.height,
-                                width: MediaQuery.of(context).size.width,
-                                image: AssetImage('assets/jbl.png'),
-                                fit: BoxFit.contain,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/ublDetails');
+                              },
+                              child: Container(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.2,
+                                width: MediaQuery.of(context).size.width * 0.7,
+                                child: Hero(
+                                  tag: 'ublspeakers',
+                                  child: Image(
+                                    height: MediaQuery.of(context).size.height,
+                                    width: MediaQuery.of(context).size.width,
+                                    image: AssetImage('assets/jbl.png'),
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
                               ),
                             ),
                             Text(
