@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ramini_app/cart.dart';
 import 'package:ramini_app/screens/chair.dart';
 import 'package:ramini_app/screens/homeScreen.dart';
 import 'package:ramini_app/screens/otpPage.dart';
@@ -31,6 +32,7 @@ class RaminiApp extends StatelessWidget {
           '/homeScreen': (context) => HomeScreen(),
           '/ublDetails': (context) => UBLSpeakers(),
           '/chairDetails': (context) => Chair(),
+          '/cart': (context) => Cart(),
         });
   }
 }
