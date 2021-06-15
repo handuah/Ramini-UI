@@ -66,6 +66,72 @@ class _CartState extends State<Cart> {
           ],
         ),
       ),
+
+      // BUTTONS AT THE END OF THE BODY
+      persistentFooterButtons: [
+        TextButton(
+          onPressed: () {},
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Icon(
+                Icons.cancel_outlined,
+                color: HexColor("#F74463"),
+              ),
+              Text(
+                // 'GHC 700',
+                'Cancel Order ',
+                style: GoogleFonts.alata(
+                  textStyle: TextStyle(
+                    // letterSpacing: 2,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w300,
+                    color: HexColor("#F74463"),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          style: TextButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            backgroundColor: Colors.grey.shade100,
+            elevation: 2.0,
+          ),
+        ),
+        TextButton(
+          onPressed: () {},
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                // 'GHC 700',
+                'Checkout ',
+                style: GoogleFonts.alata(
+                  textStyle: TextStyle(
+                    // letterSpacing: 2,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+              ),
+            ],
+          ),
+          style: TextButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            backgroundColor: HexColor("#F74463"),
+            elevation: 3.0,
+          ),
+        ),
+      ],
     );
   }
 }
