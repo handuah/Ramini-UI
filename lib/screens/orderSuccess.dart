@@ -67,7 +67,7 @@ class _SuccessOrderState extends State<SuccessOrder> {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
+            height: MediaQuery.of(context).size.height * 0.1,
           ),
           Text(
             'Your Order Has Been Accepted',
@@ -82,7 +82,7 @@ class _SuccessOrderState extends State<SuccessOrder> {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.18,
+            height: MediaQuery.of(context).size.height * 0.10,
           ),
           TextButton(
             onPressed: () {},
