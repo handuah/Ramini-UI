@@ -11,11 +11,118 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // SCAFFOLD KEY
+  final GlobalKey<ScaffoldState> _homeScaffoldKey =
+      new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _homeScaffoldKey,
       extendBody:
           true, //this removes the white space at the begining of Bottom Navigation Bar after curve
+      drawer: Drawer(
+        elevation: 2.0,
+        child: ListView(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.25,
+              color: HexColor("#F74463"),
+              child: DrawerHeader(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Material(
+                      elevation: 4.0,
+                      borderRadius: BorderRadius.circular(100.0),
+                      child: CircleAvatar(
+                        // foregroundColor: Colors.white,
+                        backgroundColor: Colors.white,
+                        maxRadius: 50.0,
+                        child: CircleAvatar(
+                          backgroundColor: Colors.red,
+                          maxRadius: 46.0,
+                          backgroundImage: AssetImage('assets/avatar.jpg'),
+                        ),
+                      ),
+                    ),
+                    Text(
+                      'Hannah Duah',
+                      style: GoogleFonts.alata(
+                        textStyle: TextStyle(
+                          // letterSpacing: 2,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
+                          color: HexColor("#FFFFFF"),
+                        ),
+                      ),
+                    ),
+                    Text(
+                      'handuah@gmail.com',
+                      style: GoogleFonts.alata(
+                        textStyle: TextStyle(
+                          // letterSpacing: 2,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w200,
+                          color: HexColor("#FFFFFF"),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              color: HexColor("#F74463"),
+              height: MediaQuery.of(context).size.height,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * 0.04,
+                ),
+                child: Column(
+                  children: [
+                    Divider(
+                      color: Colors.white,
+                      thickness: 2.0,
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    DrawerItems(Icons.home_outlined, 'Home'),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    DrawerItems(Icons.shopping_cart_outlined, 'My Cart'),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    DrawerItems(Icons.bookmark_outlined, 'Upcoming Promotions'),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    DrawerItems(Icons.card_giftcard_outlined, 'Offer Zone'),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    DrawerItems(Icons.person, 'My Account'),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    DrawerItems(Icons.chat_bubble_outline_outlined, 'My Chats'),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    DrawerItems(Icons.help_outline, 'Help'),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(
@@ -94,7 +201,10 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 IconButton(
                   icon: Icon(Icons.menu),
-                  onPressed: () {},
+                  onPressed: () {
+                    _homeScaffoldKey.currentState
+                        .openDrawer(); //OPEN DRAWER ON BUTTON CLICK
+                  },
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -754,6 +864,50 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+    );
+  }
+}
+
+// Drawer List Class
+class DrawerItems extends StatefulWidget {
+  final IconData iconName;
+  final String iconLabel;
+
+  const DrawerItems(this.iconName, this.iconLabel);
+  // const DrawerItems({ Key? key }) : super(key: key);
+
+  @override
+  _DrawerItemsState createState() => _DrawerItemsState();
+}
+
+class _DrawerItemsState extends State<DrawerItems> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Icon(
+          // Icons.home_outlined,
+          widget.iconName,
+          color: Colors.white,
+          size: 30.0,
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.06,
+        ),
+        Text(
+          // 'Home',
+          widget.iconLabel,
+          style: GoogleFonts.alata(
+            textStyle: TextStyle(
+              // letterSpacing: 2,
+              fontSize: 18.0,
+              fontWeight: FontWeight.w200,
+              color: HexColor("#FFFFFF"),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
