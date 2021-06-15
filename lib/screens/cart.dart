@@ -101,7 +101,9 @@ class _CartState extends State<Cart> {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/orderSuccess');
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

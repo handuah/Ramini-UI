@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ramini_app/screens/cart.dart';
 import 'package:ramini_app/screens/chair.dart';
 import 'package:ramini_app/screens/homeScreen.dart';
+import 'package:ramini_app/screens/orderSuccess.dart';
 import 'package:ramini_app/screens/otpPage.dart';
 import 'package:ramini_app/screens/signInPage.dart';
 import 'package:ramini_app/screens/startPage.dart';
@@ -33,6 +34,7 @@ class RaminiApp extends StatelessWidget {
           '/ublDetails': (context) => UBLSpeakers(),
           '/chairDetails': (context) => Chair(),
           '/cart': (context) => Cart(),
+          '/orderSuccess': (context) => SuccessOrder(),
         });
   }
 }
