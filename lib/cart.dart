@@ -46,7 +46,23 @@ class _CartState extends State<Cart> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            CartList(),
+            CartList('Chair', '1000', 'assets/chair.png'),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            CartList('UBL Speakers', '700', 'assets/jbl.png'),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            CartList('TCL Android TV', '5000', 'assets/tcl.png'),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            CartList('Game Pad', '700', 'assets/gamepad.png'),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            CartList('Air Pods 2', '8000', 'assets/ear-buds.png'),
           ],
         ),
       ),
@@ -54,9 +70,13 @@ class _CartState extends State<Cart> {
   }
 }
 
+// CART LIST CLASS
 class CartList extends StatefulWidget {
-  String itemName;
-  String itemAmount;
+  final String itemName;
+  final String itemAmount;
+  final String picUrl;
+
+  const CartList(this.itemName, this.itemAmount, this.picUrl);
 
   // const CartList({ Key? key }) : super(key: key);
 
@@ -75,13 +95,13 @@ class _CartListState extends State<CartList> {
           height: MediaQuery.of(context).size.height * 0.2,
           width: MediaQuery.of(context).size.width * 0.45,
           decoration: BoxDecoration(
-            color: Colors.red,
+            color: Colors.grey.shade200,
           ),
           child: Image(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            image: AssetImage('assets/jbl.png'),
-            fit: BoxFit.contain,
+            image: AssetImage(widget.picUrl),
+            fit: BoxFit.fitWidth,
           ),
         ),
         SizedBox(
