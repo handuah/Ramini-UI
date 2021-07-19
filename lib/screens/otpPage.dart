@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:sizer/sizer.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -146,8 +147,12 @@ class _OTPPageState extends State<OTPPage> {
                           width: MediaQuery.of(context).size.width * 0.16,
                           height: MediaQuery.of(context).size.height * 0.12,
                           child: TextFormField(
+                            maxLengthEnforcement: MaxLengthEnforcement.enforced,
+                            maxLength: 1,
+                            keyboardType: TextInputType.number,
+                            textInputAction: TextInputAction.next,
                             textAlign: TextAlign.center,
-                            obscureText: true,
+                            obscureText: false,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.grey.shade100,
@@ -164,6 +169,7 @@ class _OTPPageState extends State<OTPPage> {
                                   color: Colors.grey.shade100,
                                 ),
                               ),
+                              counterText: "",
                             ),
                           ),
                         ),
@@ -171,8 +177,12 @@ class _OTPPageState extends State<OTPPage> {
                           width: MediaQuery.of(context).size.width * 0.16,
                           height: MediaQuery.of(context).size.height * 0.12,
                           child: TextFormField(
+                            maxLengthEnforcement: MaxLengthEnforcement.enforced,
+                            maxLength: 1,
+                            keyboardType: TextInputType.number,
+                            textInputAction: TextInputAction.next,
                             textAlign: TextAlign.center,
-                            obscureText: true,
+                            obscureText: false,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.grey.shade100,
@@ -189,6 +199,7 @@ class _OTPPageState extends State<OTPPage> {
                                   color: Colors.grey.shade100,
                                 ),
                               ),
+                              counterText: "",
                             ),
                           ),
                         ),
@@ -196,8 +207,12 @@ class _OTPPageState extends State<OTPPage> {
                           width: MediaQuery.of(context).size.width * 0.16,
                           height: MediaQuery.of(context).size.height * 0.12,
                           child: TextFormField(
+                            maxLengthEnforcement: MaxLengthEnforcement.enforced,
+                            maxLength: 1,
+                            keyboardType: TextInputType.number,
+                            textInputAction: TextInputAction.next,
                             textAlign: TextAlign.center,
-                            obscureText: true,
+                            obscureText: false,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.grey.shade100,
@@ -206,6 +221,7 @@ class _OTPPageState extends State<OTPPage> {
                                   color: Colors.grey.shade100,
                                 ),
                               ),
+                              counterText: "",
                             ),
                           ),
                         ),
@@ -213,8 +229,12 @@ class _OTPPageState extends State<OTPPage> {
                           width: MediaQuery.of(context).size.width * 0.16,
                           height: MediaQuery.of(context).size.height * 0.12,
                           child: TextFormField(
+                            maxLengthEnforcement: MaxLengthEnforcement.enforced,
+                            maxLength: 1,
+                            keyboardType: TextInputType.number,
+                            textInputAction: TextInputAction.done,
                             textAlign: TextAlign.center,
-                            obscureText: true,
+                            obscureText: false,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.grey.shade100,
@@ -223,6 +243,8 @@ class _OTPPageState extends State<OTPPage> {
                                   color: Colors.grey.shade100,
                                 ),
                               ),
+                              counterText:
+                                  "", //removes counterText from MaxLength enforcement
                             ),
                           ),
                         ),
